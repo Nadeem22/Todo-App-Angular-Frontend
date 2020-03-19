@@ -1,0 +1,23 @@
+<h1>Welcome !</h1>
+<div class="container">
+  Plese click here to manage your Todos <a routerLink="/todos">Manage Todos</a>
+</div>
+<div class="container">
+  click here to get your custom message
+  <button (click)="getWelcomeMessage()" class="btn btn-success">
+    Click Here
+  </button>
+</div>
+<div class="container" *ngIf="errorMessage">
+  {{ errorMessage }}
+</div>
+<div class="container" *ngIf="welcomeMessage">
+  <h2>Your Customized message</h2>
+  {{ welcomeMessage }}
+</div>
+<div class="container">
+  click here to get your custom message from path variable
+  <button (click)="getWelcomeMessageByPathVariable()" class="btn btn-primary">
+    Click Here
+  </button>
+</div>

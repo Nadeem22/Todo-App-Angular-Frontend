@@ -1,0 +1,39 @@
+<nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+  <div><a href="#" class="navbar-brand">JavaCode</a></div>
+  <ul class="navbar-nav">
+    <li class="nav-item">
+      <a
+        *ngIf="hardCodedAuthenticationService.isUserLoggedIn()"
+        class="nav-link"
+        routerLink="/welcome/nadeem"
+        >Home</a
+      >
+    </li>
+    <li class="nav-item">
+      <a
+        *ngIf="hardCodedAuthenticationService.isUserLoggedIn()"
+        class="nav-link"
+        routerLink="/todos"
+        >Todo</a
+      >
+    </li>
+  </ul>
+  <ul class="navbar-nav navbar-collapse justify-content-end">
+    <li class="nav-item">
+      <a
+        *ngIf="!hardCodedAuthenticationService.isUserLoggedIn()"
+        class="nav-link"
+        routerLink="/login"
+        >Login</a
+      >
+    </li>
+    <li class="nav-item">
+      <a
+        *ngIf="hardCodedAuthenticationService.isUserLoggedIn()"
+        class="nav-link"
+        routerLink="/logout"
+        >Logout</a
+      >
+    </li>
+  </ul>
+</nav>
